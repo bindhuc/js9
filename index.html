@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ol>
+    <li>objects</li>
+    <li>objects using constructors</li>
+    <li>objects using curly braces</li>
+    <li>objects using function constructors </li>
+    <li>object keys and values</li>
+    <li>spread operator</li>
+    <li></li>
+</ol>
+
+<h3>objects</h3>
+<p>Non primitive data types, objects are
+     in key value pairs {}</p>
+     
+   
+<h3>objects using curly braces</h3>
+<pre>
+    let obj1={
+        names:"bindhu",
+        age:22,
+        contact:7864536,
+        country:"india"
+    }
+    console.log(person)
+    console.log(person.name)// for particulqr object
+    console.log(person["contact"]) // for particular object 
+</pre>
+
+<h3>this keyword</h3>
+<p>refers to the global object</p>
+<p> function inside the object is called the method</p>
+<pre>
+    const obj2={
+        names:"bindhu",
+        age:22,
+        contact:7864536,
+        country:"india" ,
+        display:function()  
+        {
+            console.log("my age is"+this.age+"my name is"+this.names)
+        }
+    }
+    obj2.display()
+</pre>
+
+<h3>objects using constructors</h3>
+<p></p>
+<pre>const obj3=new Object()
+    obj3.name="bindhu"   // dot notation
+    obj3["name"]="bindhu" 
+    console.group(obj3);
+    </pre>
+
+    <p>object.create:which allows us to create an object by taking the reference
+        of existing object
+    </p>
+<h3>object keys and values</h3>
+<pre>
+    const obj3={
+        names:"bindhu",
+        age:22,
+        contact:7864536,
+        country:"india" ,
+        display:function()  
+        {
+            console.log("my age is"+this.age+"my name is"+this.names)
+        }
+    }
+    const myObjkeys=Object.keys(obj3)
+    console.log(myObjkeys)
+    
+    const myObjvalues=Object.values(obj3)
+    console.log(myObjvalues)
+</pre>
+
+
+<h3>spread operator</h3>
+<p>
+    used to shallow copy objects
+</p>
+
+<pre>
+    // spread operator
+    const obj5={
+        height:5,
+        weight:50
+    }
+    const brain={
+        iq:1
+    }
+    const person={
+        ...obj5,
+        ...brain
+    }
+    console.log(obj5)
+    console.log(person.height)
+    
+    //2 destructure the array(line 70)
+    const arr =[1,2,3,4,5]
+    console.log(arr)
+    console.log(...arr)
+</pre>
+
+<p>object.create:which allows us to create an object by taking the reference
+    of existing object
+</p>
+
+<h3>function constructor</h3>
+<pre>
+    function Employee (name,age){
+        this.name = name;
+        this.age=age;
+    }
+    const Employee1 = new Employee (" bindhu");
+    const Employee2 = new Employee (" bin");
+    console.log(Employee1)
+</pre>
+
+<script src="./script.js"></script>
+</body>
+</html>
